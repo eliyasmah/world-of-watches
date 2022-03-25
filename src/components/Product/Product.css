@@ -5,14 +5,31 @@
     border: 1px solid black;
     border-radius: 5px;
     background-color: whitesmoke;
+    position: relative;
 }
 .product img{
    height: 300px;
    width: 300px;
    margin-top: 5px;
+   margin-left: 5px;
    border-radius: 5px;
+}
+.product-info{
+    margin-left: 15px;
 }
 .product-info p{
     margin-bottom: 0px;
     margin-top: 5px;
+}
+.cart-btn{
+    width: 100%;
+    padding: 10px 0;
+    background-color: burlywood;
+    font-size: 17px;
+    border: none;
+    position: absolute;
+    bottom: 0;
+}
+.cart-btn:hover{
+    background-color: orange;
 }
