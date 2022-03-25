@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: rgb(230, 236, 236);
+  padding-top: 10px;
 }
 
 .App-logo {
@@ -35,4 +37,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.site-name{
+  color: blueviolet;
+  font-size: 50px;
+  font-weight: 400;
 }
