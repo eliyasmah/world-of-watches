@@ -4,6 +4,7 @@
     width: 310px;
     border: 1px solid black;
     border-radius: 5px;
+    margin-bottom: 40px;
     background-color: whitesmoke;
     position: relative;
 }

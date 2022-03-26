@@ -13,7 +13,6 @@ const Shop = () => {
             .then(data => setProducts(data))
     }, []);
     const addToCart = (product) => {
-        console.log(product.name);
         const newCart = [...cart, product];
         setCart(newCart);
     }
@@ -28,9 +27,8 @@ const Shop = () => {
                     ></Product>)
                 }
             </div>
-            <div>
-                <h1>cart section here:{cart.length}</h1>
-                <Cart></Cart>
+            <div className="cart-container">
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
