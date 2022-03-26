@@ -1,13 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
-import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([])
-    // console.log(cart);
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
@@ -16,9 +14,12 @@ const Shop = () => {
     const addToCart = (watch) => {
         const newCart = [...cart, watch];
         setCart(newCart);
-
-
-        // setCart(newCart);
+    }
+    const removeCart = () => {
+        setCart([]);
+    }
+    const chooseOne = () => {
+        cart(Math.round);
     }
     return (
         <div className="shop-container">
@@ -33,7 +34,14 @@ const Shop = () => {
             </div>
             <div className="cart-container">
 
-                <Cart cart={cart}></Cart>
+                <div className="cart">
+                    <h3>Selected Watches</h3>
+                    {
+                        cart.map((item) => (<h4 key={item.id}>{item.name}</h4>))
+                    }
+                    <button onClick={chooseOne} className="choose-btn">CHOOSE 1 FOR ME</button>
+                    <button onClick={removeCart} className="choose-again-btn">CHOOSE AGAIN</button>
+                </div>
             </div>
         </div>
     );
