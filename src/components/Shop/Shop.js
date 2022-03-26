@@ -19,7 +19,7 @@ const Shop = () => {
         setCart([]);
     }
     const chooseOne = () => {
-        cart(Math.round);
+        addToCart(cart[Math.floor(Math.random() * cart.length)]);
     }
     return (
         <div className="shop-container">
