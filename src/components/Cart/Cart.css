@@ -16,9 +16,15 @@
     border-radius: 5px;
     color: red;
 }
+.choose-btn:hover{
+    background-color: rgb(220, 213, 230);
+}
 .choose-again-btn{
     border: 1px solid blueviolet;
     padding: 8px;
     border-radius: 5px;
     color: rgb(61, 57, 57);
+}
+.choose-again-btn:hover{
+    background-color: rgb(224, 207, 207);
 }
